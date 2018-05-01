@@ -1,0 +1,2 @@
+#!/bin/sh
+watch -n 1 "ps -ef | grep 'python3 -m foglamp\|services/storage --address\|/bin/sh services\|postgres:' | grep -v 'grep' | grep -v 'watch'"

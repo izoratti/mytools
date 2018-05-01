@@ -1,0 +1,14 @@
+#!/bin/sh
+
+echo "Building the HTML pages..."
+make html
+echo "...Done."
+
+cd _build
+
+echo "Moving the HTML pages to the Apache document directory..."
+sudo rsync -rlptDv --delete * /var/www/html/FogLAMP/.
+echo
+echo "Build and transfer complete."
+
+exit 0

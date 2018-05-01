@@ -1,0 +1,6 @@
+#!/bin/sh
+
+scp ${HOME}/foglamp-snap/*.snap ubuntu@izubutestsnap:Downloads/.
+
+exit 0
+

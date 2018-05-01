@@ -1,0 +1,4 @@
+#!/bin/sh
+export FOGLAMP_ROOT=`pwd`
+$FOGLAMP_ROOT/scripts/foglamp $1
+

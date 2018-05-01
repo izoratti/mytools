@@ -1,0 +1,4 @@
+#!/bin/sh
+foglamp_use_from_here stop
+scripts/plugins/storage/postgres reset
+

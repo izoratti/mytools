@@ -1,0 +1,4 @@
+#!/bin/sh
+export FOGLAMP_ROOT=`pwd`
+$FOGLAMP_ROOT/scripts/extras/fogbench -t $FOGLAMP_ROOT/data/extras/fogbench/fogbench_sensor_coap.template.json $@
+

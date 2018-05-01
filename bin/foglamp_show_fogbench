@@ -1,0 +1,3 @@
+#!/bin/sh
+curl -s http://localhost:8081/foglamp/asset/fogbench%2Ftemperature | jq -c '.[]'
+

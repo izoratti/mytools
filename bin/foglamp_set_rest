@@ -1,0 +1,27 @@
+#!/bin/bash
+
+#set -x
+
+case "$1" in
+  "http")
+    protocol="true"
+    ;;
+
+  "https")
+    protocol="false"
+    ;;
+
+  *)
+    echo "usage: ${0} {http|https}"
+    exit 1
+    ;;
+
+esac
+
+curl_command="curl -H 'Content-Type: application/json' -X PUT -d '{ \"value\": \"${protocol}\" }' http://localhost:8081/foglamp/category/rest_api/enableHttp | jq"
+
+eval $curl_command
+
+# curl -H 'Content-Type: application/json' -X PUT -d '{ "value": "${3}://${1}:${2}/ingress/messages" }' http://localhost:8081/foglamp/category/SEND_PR_1/URL | jq
+
+exit 0
