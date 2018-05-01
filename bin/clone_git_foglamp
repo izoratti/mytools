@@ -1,0 +1,8 @@
+#!/bin/sh
+
+cd $HOME
+
+sudo chown -R $USER:$USER .local/*
+git clone git@github.com:foglamp/FogLAMP.git
+
+exit 0
